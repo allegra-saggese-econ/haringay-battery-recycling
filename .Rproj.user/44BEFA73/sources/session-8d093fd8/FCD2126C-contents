@@ -19,38 +19,32 @@ library(exactextractr)
 drop_df <- read_csv("battery_recycling_points_full.csv", 
                       col_types = cols(Lat = col_number(), 
                       Long = col_number(), `Confirmed via call` = col_factor(levels = c("Y", 
-                      "N")), `Battery drop off present?` = col_factor(levels = c("Y", "N")))) # upload data - make Y/N column a factor
-# recode as spatial object
+   
+                                                                                        
+                                                                                        
+                                                                                                           "N")), `Battery drop off present?` = col_factor(levels = c("Y", "N")))) # upload data - make Y/N column a factor
+# recode as spatial object, set object equal to google maps CRS
 drop_sp <- st_as_sf(drop_df, coords = c("Long", "Lat"), crs = 4326) 
 ggplot(data = drop_sp) + geom_sf()
-# recode as spatialpointsdf - different technique but probably won't need it 
-#coordinates(drop_df) <- ~Long + Lat
-#drop_df 
-#proj4string(drop_df) <- CRS("+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs")
 
-# upload geo-data including borough, ward. LSOA boundary maps
-getwd()
-# from ONS - WARD LEVEL
+
+# upload London data 
+## from ONS - WARD LEVEL
 wards <- st_read(file.path(getwd(), "London-wards-2018/London-wards-2018_ESRI/London_Ward_CityMerged.shp"))
 class(wards)
 ggplot(data = wards) + geom_sf()
 
-# from City of London - BOROUGH LEVEL
+## from City of London - BOROUGH LEVEL
 boroughs <- st_read(file.path(getwd(), "gis-boundaries/ESRI/London_Borough_Excluding_MHW.shp"))
 ggplot(data = boroughs) + geom_sf()
 
-# reduce borough data only to haringey
-har <- boroughs$NAME =="Haringey"
-haringey_bound <- boroughs[boroughs$NAME == "Haringey",]
-
-
-# test plots
+# test CRS - to align across drop site df and borough map projection
 st_crs(boroughs) == st_crs(drop_sp) # proving false - no explanation
-# changing the boroughs projection
+# changing the drop_sp CRS to match boroughs
 drop_sp_adjust <- st_transform(drop_sp, st_crs(boroughs))
-st_crs(boroughs) == st_crs(drop_sp_adjust) # proving false - no explanation
+st_crs(boroughs) == st_crs(drop_sp_adjust) # to sense check it worked 
 
-# plot overlay
+# plot overlay of drop sites and borough map 
 p3 <- ggplot() +
     geom_sf(data = boroughs) +
     geom_sf(data = drop_sp_adjust, color = "red")
