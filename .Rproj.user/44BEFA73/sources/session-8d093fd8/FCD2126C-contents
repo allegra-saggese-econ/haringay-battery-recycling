@@ -20,8 +20,12 @@ drop_df <- read_csv("battery_recycling_points_full.csv",
                       Long = col_number(), `Confirmed via call` = col_factor(levels = c("Y", 
                       "N")), `Battery drop off present?` = col_factor(levels = c("Y", "N")))) # upload data - make Y/N column a factor
 # recode as spatial object
-drop_sp <- st_as_sf(drop_df, coords = c("Lat", "Long"), crs = 4326) 
+drop_sp <- st_as_sf(drop_df, coords = c("Long", "Lat"), crs = 27700) 
 ggplot(data = drop_sp) + geom_sf()
+# recode as spatialpointsdf - different technique but probably won't need it 
+coordinates(drop_df) <- ~Long + Lat
+drop_df 
+proj4string(drop_df) <- CRS("+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs")
 
 # upload geo-data including borough, ward. LSOA boundary maps
 getwd()
@@ -38,14 +42,18 @@ ggplot(data = boroughs) + geom_sf()
 har <- boroughs$NAME =="Haringey"
 haringey_bound <- boroughs[boroughs$NAME == "Haringey",]
 
-# set same CRS for data layers
-drop_crs <- st_transform(drop_sp, st_crs(haringey_bound))
 
-# need to align boundary boxes
-proj = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs"
+# test plots
+st_crs(boroughs) == st_crs(drop_sp) # proving false - no explanation
+test_intersect <- st_intersection(drop_sp, boroughs)
+
+plot(boroughs)
+plot(drop_crs)
+
+p1 <- ggplot(boroughs) + geom_sf()
+p2 <- ggplot(drop_crs) + geom_sf()
 
 
-ggplot() + geom_sf(data = joined_df)
 
 
 # upload bus and bike route data for overlay (step 2)
