@@ -13,6 +13,7 @@ library(sf)
 library(ggrepel)
 library(ggspatial)
 library(raster) # can use for SP
+library(exactextractr)
 
 # upload store data
 drop_df <- read_csv("battery_recycling_points_full.csv", 
@@ -20,12 +21,12 @@ drop_df <- read_csv("battery_recycling_points_full.csv",
                       Long = col_number(), `Confirmed via call` = col_factor(levels = c("Y", 
                       "N")), `Battery drop off present?` = col_factor(levels = c("Y", "N")))) # upload data - make Y/N column a factor
 # recode as spatial object
-drop_sp <- st_as_sf(drop_df, coords = c("Long", "Lat"), crs = 27700) 
+drop_sp <- st_as_sf(drop_df, coords = c("Long", "Lat"), crs = 4326) 
 ggplot(data = drop_sp) + geom_sf()
 # recode as spatialpointsdf - different technique but probably won't need it 
-coordinates(drop_df) <- ~Long + Lat
-drop_df 
-proj4string(drop_df) <- CRS("+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs")
+#coordinates(drop_df) <- ~Long + Lat
+#drop_df 
+#proj4string(drop_df) <- CRS("+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs")
 
 # upload geo-data including borough, ward. LSOA boundary maps
 getwd()
@@ -45,14 +46,16 @@ haringey_bound <- boroughs[boroughs$NAME == "Haringey",]
 
 # test plots
 st_crs(boroughs) == st_crs(drop_sp) # proving false - no explanation
-test_intersect <- st_intersection(drop_sp, boroughs)
+# changing the boroughs projection
+drop_sp_adjust <- st_transform(drop_sp, st_crs(boroughs))
+st_crs(boroughs) == st_crs(drop_sp_adjust) # proving false - no explanation
 
-plot(boroughs)
-plot(drop_crs)
+# plot overlay
+p3 <- ggplot() +
+    geom_sf(data = boroughs) +
+    geom_sf(data = drop_sp_adjust, color = "red")
 
-p1 <- ggplot(boroughs) + geom_sf()
-p2 <- ggplot(drop_crs) + geom_sf()
-
+# trim boroughs data to a radius outside of harringay
 
 
 
