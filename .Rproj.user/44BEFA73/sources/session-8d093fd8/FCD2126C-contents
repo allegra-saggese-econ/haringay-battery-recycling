@@ -1,6 +1,5 @@
-# AS - cleaning of battery drop off points
-# feed into RShiny dashboard of map
-
+# AS - cleaning of battery drop off points to feed into RShiny dashboard of map
+# general packages for cleaning data
 library(tidyr)
 library(readr)
 library(ggplot2)
@@ -49,8 +48,18 @@ p3 <- ggplot() +
     geom_sf(data = boroughs) +
     geom_sf(data = drop_sp_adjust, color = "red")
 
-# trim boroughs data to a radius outside of haringey
+p3
+# trim boroughs data to a radius outside of Haringey
+out <- st_intersection(boroughs, drop_sp_adjust)
 
+list_boroughs <- c(unique(out$NAME))
+sub_boroughs <- boroughs[boroughs$NAME %in% list_boroughs, ]
+
+con_map <- ggplot() + 
+  geom_sf(data = sub_boroughs) +
+  geom_sf(data = drop_sp_adjust)
+
+con_map
 
 
 # upload bus and bike route data for overlay (step 2)

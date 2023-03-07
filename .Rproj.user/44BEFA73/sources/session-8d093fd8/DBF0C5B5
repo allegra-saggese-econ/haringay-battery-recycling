@@ -1,0 +1,28 @@
+{
+    "id": "DBF0C5B5",
+    "path": null,
+    "project_path": null,
+    "type": "object_explorer",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1678226187123.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "id": "465e00f0cc334734a8aa24411b236449",
+        "name": "list_boroughs",
+        "title": "list_boroughs",
+        "language": "R",
+        "source_window_id": "",
+        "Source": "Source"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 2370342572872,
+    "encoding": "",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1678226187123,
+    "read_only": false,
+    "read_only_alternatives": []
+}
