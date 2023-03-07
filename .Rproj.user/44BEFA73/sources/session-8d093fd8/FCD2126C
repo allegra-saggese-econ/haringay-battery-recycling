@@ -3,9 +3,9 @@
     "path": "~/GitHub/haringay-battery-recycling/battery_data_clean.R",
     "project_path": "battery_data_clean.R",
     "type": "r_source",
-    "hash": "3760076591",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1678121090640.0,
     "source_on_save": false,
     "relative_order": 2,
@@ -13,7 +13,7 @@
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "57,53",
+        "cursorPosition": "58,0",
         "scrollLine": "49"
     },
     "folds": "",
@@ -21,7 +21,7 @@
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1678211875934,
+    "last_content_update": 1678212017452,
     "read_only": false,
     "read_only_alternatives": []
 }

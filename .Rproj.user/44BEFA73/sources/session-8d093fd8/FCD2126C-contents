@@ -55,7 +55,7 @@ p3 <- ggplot() +
     geom_sf(data = boroughs) +
     geom_sf(data = drop_sp_adjust, color = "red")
 
-# trim boroughs data to a radius outside of harringay
+# trim boroughs data to a radius outside of haringey
 
 
 
