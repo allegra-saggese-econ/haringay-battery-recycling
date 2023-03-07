@@ -1,0 +1,32 @@
+Name,Location,Lat,Long,Address,Post code,Full address,Public/Private,Type,Lithium batteries accepted? ,Confirmed via call,Battery drop off present?,Notes
+Sainsbury,"51.576941,-0.097296",51.576941,-0.097296,"Williamson Rd, Finsbury Park, London",N4 1UJ,"Williamson Rd, Finsbury Park, LondonN4 1UJ",Private,Grocery,,Y,Y,
+Aldi,"51.575773,-0.09745",51.575773,-0.09745,"Unit 6, Arena Shopping Park, Finsbury Park, London",N4 1ED,"Unit 6, Arena Shopping Park, Finsbury Park, LondonN4 1ED",Private,Grocery,,Y,Y,
+Wood Green Library,"51.595515,-0.109706",51.595515,-0.109706,"187-197A High Rd, London",N22 6XD,"187-197A High Rd, LondonN22 6XD",Public,Library,No,Y,Y,
+Alexandra Park Library,"51.598976,-0.136118",51.598976,-0.136118,Alexandra Park Road,N22 7UJ,Alexandra Park RoadN22 7UJ,Public,Library,No,Y,N,"Library is under refurbishment, when they re-open they will do battery drop off again."
+Coombes Croft Library,"51.598206,-0.067588",51.598206,-0.067588,"4 High Rd, London",N17 8AG,"4 High Rd, LondonN17 8AG",Public,Library,No,Y,Y,
+Highgate Library,"51.577144,-0.143745",51.577144,-0.143745,"Shepherds Hill, Highgate, London",N6 5QJ,"Shepherds Hill, Highgate, LondonN6 5QJ",Public,Library,No,Y,N,"Library is under refurbishment, when they re-open they will do battery drop off again."
+Hornsey Library,"51.578152,-0.122106",51.578152,-0.122106,"Haringey Park, London",N8 9JA,"Haringey Park, LondonN8 9JA",Public,Library,No,Y,Y,
+Marcus Grove Library,"51.587471,-0.071526",51.587471,-0.071526,"1 Philip Lane, Tottenham",N15 4JA,"1 Philip Lane, TottenhamN15 4JA",Public,Library,No,Y,N,"Library is under refurbishment, when they re-open they will do battery drop off again."
+Muswell Hill Library,"51.591181,-0.143201",51.591181,-0.143201,"Queens Ave, Muswell Hill, London",N10 3PE,"Queens Ave, Muswell Hill, LondonN10 3PE",Public,Library,No,Y,Y,
+St Anne's Library,"51.58085,-0.082914",51.58085,-0.082914,"Cissbury Road, London",N15 5PU,"Cissbury Road, LondonN15 5PU",Public,Library,No,Y,Y,
+Stroud Green and Haringay Library,"51.5776,-0.10647",51.5776,-0.10647,"Quernmore Rd, Stroud",N4 4QR,"Quernmore Rd, StroudN4 4QR",Public,Library,No,Y,Y,
+Co-op,"51.579094,0.124024",51.579094,0.124024,"21-23 The Broadway, London",N8 8DU,"21-23 The Broadway, LondonN8 8DU",Private,Grocery,,N,Y,
+Co-op,"51.570384,-0.095891",51.570384,-0.095891,"Green Lanes, Finsbury Park, London",N4 2LX,"Green Lanes, Finsbury Park, LondonN4 2LX",Private,Grocery,,N,Y,
+Morrison's,"51.557508,-0.117071",51.557508,-0.117071,10 Hertslet Rd,N7 6PL,10 Hertslet RdN7 6PL,Private,Grocery,,N,Y,
+Tesco,"51.579184,-0.124027",51.579184,-0.124027,"25 The Broadway, Crouch End",N8 9SN,"25 The Broadway, Crouch EndN8 9SN",Private,Grocery,,N,Y,
+WH Smith,"51.594456,-0.108142",51.594456,-0.108142,"110 High Road, London",N22 6HE,"110 High Road, LondonN22 6HE",Private,General,,Y,N,This store is closing in March 2023 so they no longer do battery drop-offs
+Wicke's Tottenham,"51.580338,-0.076457",51.580338,-0.076457,"734-736 Seven Sisters Rd, South Tottenham",N15 5NH,"734-736 Seven Sisters Rd, South TottenhamN15 5NH",Private,Home Goods,No,Y,N,Wicke's discontinued their programme at this store
+Marks and Spencers,"51.564784,-0.107469",51.564784,-0.107469,"6 City N Plaza, Finsbury Park, London",N4 3FU,"6 City N Plaza, Finsbury Park, LondonN4 3FU",Private,Grocery,No,N,Y,
+Cancer Research UK - Crouch End,"51.578798,-0.124008",51.578798,-0.124008,"13 The Broadway, Crouch End, London",N8 8DU,"13 The Broadway, Crouch End, LondonN8 8DU",Public,Charity,No,Y,Y,
+Cancer Research UK - Wood Green,"51.592961,-0.10631",51.592961,-0.10631,"7 High Road, Wood Green, London",N22 6BH,"7 High Road, Wood Green, LondonN22 6BH",Public,Charity,No,Y,Y,
+Cancer Research UK - Muswell Hill 2,"51.590762,-0.143228",51.590762,-0.143228,"161 Muswell Hill Broadway, Muswell Hill, London",N10 3RS,"161 Muswell Hill Broadway, Muswell Hill, LondonN10 3RS",Public,Charity,No,Y,Y,
+Cancer Research UK - Muswell Hill 1,"51.596372,-0.109619",51.596372,-0.109619,"85 The Broadway, Muswell Hill, London",N10 3HA,"85 The Broadway, Muswell Hill, LondonN10 3HA",Public,Charity,No,Y,Y,
+Cancer Research UK - Palmers Green,"51.619072,-0.107687",51.619072,-0.107687,"353 Green Lanes, Palmers Green, London",N13 4JG,"353 Green Lanes, Palmers Green, LondonN13 4JG",Public,Charity,No,Y,Y,
+Sainsbury's Convenience,"51.571702,-0.089677",51.571702,-0.089677,"147 Woodberry Grove, London ",N4 2SB,"147 Woodberry Grove, London N4 2SB",Private,Grocery,,N,Y,
+Sainsbury's Hornsey,"51.591367,-0.104802",51.591367,-0.104802,"33 High Road, Hornsey, London",N8 7QB,"33 High Road, Hornsey, LondonN8 7QB",Private,Grocery,,N,Y,
+Wood Green HWRC,"51.593299,-0.114956",51.593299,-0.114956,"77 Western Rd, Haringey",N22 6UG,"77 Western Rd, HaringeyN22 6UG",Public,Recycling Centre,Yes,Y,Y,
+Wilkinson's,"51.594673,-0.109489",51.594673,-0.109489,"Unit 106, Wood Green Shopping City, Wood Green",N22 6YD,"Unit 106, Wood Green Shopping City, Wood GreenN22 6YD",Private,General,,N,Y,
+Plumbing Trade Supplies - Wood Green,"51.605341,-0.096085",51.605341,-0.096085,"Unit 7 St George's Industrial Estate, White Hart Lane, London",N22 5QL,"Unit 7 St George's Industrial Estate, White Hart Lane, LondonN22 5QL",Private,Home Goods,,Y,N,Stopped doing battery recycling but are open to re-opening the programme
+Poundland - Wood Green,"51.591024,-0.103693",51.591024,-0.103693,"12-14 High Rd, London",N22 6BX,"12-14 High Rd, LondonN22 6BX",Private,Home Goods,,Y,Y,
+Lidl - Finsbury Park,"51.566142,-0.107683",51.566142,-0.107683,"The Arts Building, Morris Pl, Finsbury Park, London",N4 3FB,"The Arts Building, Morris Pl, Finsbury Park, LondonN4 3FB",Private,Grovery,,N,Y,
+Lidl - Finsbury Park Corner,"51.565107,-0.104485",51.565107,-0.104485,"269-271 Seven Sisters Rd, Finsbury Park, London",N4 2DE,"269-271 Seven Sisters Rd, Finsbury Park, LondonN4 2DE",Private,Grocery,,N,Y,
