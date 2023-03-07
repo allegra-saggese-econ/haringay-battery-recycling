@@ -11,6 +11,8 @@ library(mapview)
 library(sp)
 library(sf)
 library(ggrepel)
+library(ggspatial)
+library(raster) # can use for SP
 
 # upload store data
 drop_df <- read_csv("battery_recycling_points_full.csv", 
@@ -39,9 +41,12 @@ haringey_bound <- boroughs[boroughs$NAME == "Haringey",]
 # set same CRS for data layers
 drop_crs <- st_transform(drop_sp, st_crs(haringey_bound))
 
-# test plot (not ggplot yet) - not successful
-plot(haringey_bound$geometry)
-plot(drop_crs$geometry)
+# need to align boundary boxes
+proj = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +nadgrids=OSTN15_NTv2_OSGBtoETRS.gsb +units=m +no_defs +type=crs"
+
+
+ggplot() + geom_sf(data = joined_df)
+
 
 # upload bus and bike route data for overlay (step 2)
 ## TBD ## 
